@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation using JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!---header section strated -->
+
+    <header class="header">
+        <div class="left">
+            <img src="bihar_sakar_logo.png" alt="">
+        </div>
+        <div class="mid">
+<h1>फॉर्म / Form-XV</h1>  
+<h2>आय प्रमाण-पत्र हेतु आवेदन-पत्र (राजस्व अधिकारी स्तर से)</h2> 
+<h3>Application Form for Issuance of Income Certificate from Revenue Officer Level</h3>    
+ </div>
+        <div class="right">
+            <img src="bihar mission logo.jpg" alt="">
+        </div>
+    </header>
+
+<!-- main section started -->
+
+<main class="main">
+
+<!-- first box -->
+
+
+    <div class="first-main-section">
+    <div id="table-heading">आवेदक का विवरण / Details of Applicant</div>
+    <div class="row-1">
+    <div class="row-11">
+            <span id="gender">लिंग / Gender</span>
+            <div id="data-11" required>
+                <input type="radio"name="gender" id="male" onclick="radiobox()" ru><label for="male-input">पुरुष / Male</label>
+           <input type="radio"name="gender"id="female"onclick="radiobox()"><label for="female-input">स्त्री / Female</label>
+            <input type="radio"name="gender"id="transgender"onclick="radiobox()"><label for="transgender-input">तृतीय लिंग / Third Gender</label>
+        </div>
+    </div>
+
+        <div id="row-12">
+            <label for="salutation" >अभिवादन / Salutation </label><br>
+            <select name="salutation" id="salut" onchange="selectone()">
+                <option value>please select</option>
+                <option value="shree">shree</option>
+                <option value="shree mati">shree mati</option>
+                <option value="shushree">shushree</option>
+                <option value="none">no any salutation</option>
+            </select>
+       </div>
+</div>
+
+<div class="row-2">
+<div id="row-21">
+        <label for="applicant">Name of Applicant</label><br>
+        <input type="text" name="applicant" id="applicant" oninput="inputtake()"style="text-transform:uppercase"required>
+        </div>
+
+<div id="row-22">
+                <label for="applicant">आवेदक / आवेदिका का नाम </label><br>
+                <input type="text"name="applicant" id="applicant-name"required>
+               </div>
+</div>
+
+<div class="row-3">
+<div id="row-31">
+                <label for="father">Name of Father</label><br>
+                <input type="text"name="father" style="text-transform:uppercase"required>
+               </div>
+
+<div id="row-32">
+                <label for="applicant">पिता का नाम </label><br>
+                <input type="text"name="father"required>
+            </div>
+  </div> 
+  
+  <div class="row-4">
+<div id="row-41">
+                <label for="mother">Name of Mother </label><br>
+                <input type="text"name="mother" style="text-transform:uppercase"required>
+            </div>
+
+<div id="row-42">
+                <label for="applicant"> माता का नाम</label><br>
+                <input type="text"name="mother"required>
+            </div>
+   </div>  
+   
+   <div class="row-5">
+<div  id="row-51">
+                <label for="husband">Name of Husband </label><br>
+                <input type="text"name="husband" style="text-transform:uppercase">
+            </div>
+
+<div id="row-52">
+                <label for="husband">पति का नाम</label><br>
+                <input type="text" name=""husband>
+            </div>
+  </div>  
+  
+  <div class="row-6">
+<div  id="row-61">
+                <label for="mobile">आवेदक का मोबाइल संख्या / Mobile <br> No. of Applicant</label><br>
+                <input type="number" name="mobile"id=" mobile"onclick="mymobile()" required>
+            </div>
+
+<div  id="row-62">
+                <label for="email">आवेदक का ईमेल / Email of Applicant
+                </label><br>
+                <input type="email"name="email"required>
+            </div>
+        
+</div>
+<div  id="addr"><span> पता / Address :-</span> </div>
+<div class="row-7">
+<div id="row-71" style="margin-top: 18px;">
+        <label for="state" id="state-label" >राज्य / State </label><br>
+<select name="state" id="state"required>
+    <option value>Please select</option>
+    <option value="1">Bihar</option>
+</select>   
+</div>
+
+<div id="row-72"style="margin-top: 18px;">
+        <label for="district"style="padding-top:20px">जिला / District </label><br>
+<select name="district" id="district">
+    <option value>Please select</option>
+    <option value="1">Madhubani</option>
+    <option value="2">pandul</option>
+    <option value="3">Arariya</option>
+</select>   
+</div>
+</div>
+
+
+<div class="row-8">
+<div id="row-81"style="margin-top: 18px;">
+        <label for="sub-division">अनुमंडल / Sub-Division  </label><br>
+<select name="sub-division" id="sub-division">
+    <option value>Please select</option>
+    <option value="1">phulpras</option>
+    <option value="2">Madhubani</option>
+    <option value="3">Jhanjarpur</option>
+</select>   
+</div>
+
+<div id="row-82"style="margin-top: 18px;">
+        <label for="block">प्रखंड / Block </label><br>
+<select name="block" id="block">
+    <option value>Please select</option>
+    <option value="1">Ghoghardiha</option>
+</select>   
+</div>
+</div>
+
+
+<div id="local">स्थानीय निकाय का प्रकार / Type of Local Body</div>
+
+<div id="row-91-col1">
+    <input type="radio" name="panchayat">
+    <label for="panchayat"> ग्राम पंचायत / Village Panchayat</label><br>
+    <input type="radio" name="corporation">
+    <label for="corporation"> नगर निगम / Municipal Corporation</label><br>
+</div>
+
+<div  id="row-91-col2">
+    <input type="radio" name="municipality">
+    <label for="municipality"> नगर परिषद / Municipality</label><br>
+    <input type="radio" name="panchayat-2">
+    <label for="panchayat-2"> नगर पंचायत / Town Panchayat</label>
+</div>
+
+<div class="row-9">
+<div  id="row-92">
+        <label for="ward">वार्ड संख्या / Ward No.</label><br>
+        <input type="number"name="ward">
+        </div>
+
+
+<div  id="row-101">
+        <label for="village">ग्राम (Village) / मोहल्ला (Town) </label><br>
+        <input type="text">
+    </div>
+   </div> 
+
+   <div class="row-10">
+<div  id="row-102">
+        <label for="post-office">डाक घर / Post office </label><br>
+        <input type="text">
+    </div>
+    
+<div  id="row-111">
+        <label for="police-station">थाना / Police Station</label><br>
+        <select name="police-station" id="police-station">
+            <option value>Please select</option>
+            <option value="1">Ghpghardiha</option>
+            <option value="2">Phulpras</option>
+        </select>
+    </div>
+   </div>
+
+
+   <div class="row-11">
+<div  id="row-112">
+        <label for="pin-code">पिन कोड</label><br>
+        <input type="number">
+   </div>
+
+
+
+<div  id="row-122">
+    <label for="adhar">आधार संख्या / Aadhaar Number</label><br>
+    <input type="number" >
+</div>
+</div>
+
+<div  id="row-121">
+    <label for="photo">आवेदक का फोटो / Photograph of Applicant</label><br>
+    <input type="file" style="width:76%;margin-bottom: 25px">
+    <img style="width:40px;float:right" src="gallery.png" alt="">
+</div>
+</div>
+
+
+<!-- second box -->
+
+
+<div class="second-main-section">
+    <div id="table-heading">अन्य / Others</div>
+
+    <div class="row-13">
+    <div  id="row-131">
+        <label for="police-station">पेशा / Profession </label><br>
+        <select name="police-station" id="police-station">
+            <option value>Please select</option>
+            <option value="1">Student</option>
+            <option value="2">Private Job</option>
+            <option value="3">Goverment Job</option>
+        </select>
+    </div>
+
+    <div  id="row-141">
+        <label for="adhar">आवेदन का उद्देश्य / Purpose of Application</label><br>
+        <input type="text">
+    </div>
+</div>
+
+<div class="row-15">
+    <div  id="row-151">
+        <label for="adhar">सरकारी सेवा से आय / Income from Govt. Service</label><br>
+        <input type="number">
+    </div>
+
+    <div  id="row-152">
+        <label for="adhar">कृषि से आय / Income from Agriculture</label><br>
+        <input type="number">
+    </div>
+</div>
+
+<div class="row-16">
+    <div  id="row-161">
+        <label for="adhar">व्यवसायिक आय / Income from Business</label><br>
+        <input type="number">
+    </div>
+
+    <div  id="row-162">
+        <label for="adhar">अन्य स्रोतों से आय / Income from Other Sources</label><br>
+        <input type="number">
+    </div>
+</div>
+    <div  id="row-171">
+        <label for="adhar">कुल आय (वार्षिक) / Total income (Annual)</label><br>
+        <input type="number"style="margin-bottom:15px">
+    </div>
+
+
+
+</div>
+
+<!-- third box -->
+
+
+<div class="third-main-section">
+    <div id="table-heading">स्व-घोषणा / Self Declaration</div>
+<div id="declar">
+    <p id="declaration">
+        मैं ,  पिता- , माता- ,  ग्राम / मोहल्ला-, , वार्ड-, डाकघर-, थाना-, प्रखंड-, अनुमंडल-, जिला-, राज्य- बिहार एवं मेरे परिवार की वार्षिक आय निम्नांकित है :- <br>
+        सरकारी सेवा से आय ₹/-<br>
+        व्यवसाय से आय ₹/-<br>
+        कृषि से आय ₹/-<br>
+        अन्य स्रोतों से आय ₹/-<br>
+        कुल आय (वार्षिक) ₹/-<br>
+        मैं  प्रमाणित करता/करती हूँ कि मेरे द्वारा दी गई उपरोक्त जानकारी मेरे ज्ञान और विश्वास के अनुसार सत्य है| यदि मेरे द्वारा दी गई जानकारी असत्य / गलत पायी जाती है तो मैं पूर्ण रूप से जानता/जानती हूँ कि इस आवेदन-पत्र के आधार पर दिये गये प्रमाण-पत्र के द्वारा शैक्षणिक संस्थान में लिया गया प्रवेश / लोक सेवाओं में प्राप्त की गई नियुक्ति निरस्त कर दी जायेगी / दिया जायेगा अथवा इस प्रमाण-पत्र के आधार पर कोई अन्य सुविधा / लाभ प्राप्त किया गया है उससे भी वंचित किया जा सकेगा और इस संबंध में विधि एवं नियमों के अधीन मेरे विरूद्ध की जाने वाली कार्रवाई के लिए मैं उत्तरदायी रहूँगा/रहूँगी|
+    </p>
+<input type="checkbox"style="margin-bottom:10px">
+<label for="checkbox"> I Agree </label>
+</div>
+
+</div>
+
+
+<!-- fourth box -->
+
+<!-- 
+<div class="fourth-main-section">
+    <div id="table-heading">Additional Details</div>
+
+    <div id="office">
+        <label for="office">Apply to the Office</label> <br>
+        <input type="text"style="margin-bottom:15px">
+    </div>
+</div> -->
+
+
+<!-- fifth box -->
+
+
+<!-- <div class="fifth-main-section captcha">
+   <h4>Word verification</h4>
+   <input type="number"style="margin-bottom:15px">
+</div> -->
+
+
+</main>
+
+
+<!-- footer section started -->
+
+
+<footer class="footer">
+<!-- <div id="footer-content">
+    Content on this website is owned, by the General <br> Administration Department, Government of Bihar <br>
+    Site is technically designed, hosted and maintained by National Informatics Centre (NIC) <br>
+    Powered By — ServicePlus
+</div> -->
+<div class="btn">
+    <button type="submit" style="background-color:green">Proceed</button>
+    <button type="button"style="background-color:red" >Close</button>
+    <button type="reset" style="background-color:rgb(65, 19, 232)">Reset</button>
+</div>
+
+<p id="copywrite">Copywrite 2023 @R.A.R</p>
+</footer>
+
+
+
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
